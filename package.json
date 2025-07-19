@@ -18,7 +18,7 @@
     "test-succeed": "echo \"This mimics a passing test suite... ✅\" && exit 0;",
     "test-fail": "echo \"This mimics a failing test suite... ❌\" && exit 1;"
   },
-  "dependencies": {
+  "devDependencies": {
     "noop": "^1.0.1"
   }
 }
