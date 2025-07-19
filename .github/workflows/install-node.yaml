@@ -5,7 +5,7 @@ on:
     branches:
       - sp/initial-workflow-development
     paths:
-      - .github/workflows/install-java.yaml
+      - .github/workflows/install-node.yaml
   workflow_dispatch:
 
 jobs:
