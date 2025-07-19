@@ -36,7 +36,7 @@ jobs:
     env:
       NODE_DIR: /opt/hostedtoolcache/node/20.19.2/
     steps:
-      - name: Restore Java from cache
+      - name: Restore Node from cache
         id: cache-task
         uses: actions/cache@v4
         with:
