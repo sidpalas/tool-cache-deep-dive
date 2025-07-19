@@ -31,6 +31,24 @@ jobs:
           which node
           node -v
 
+  older-version-gha-cache:
+    runs-on: ubuntu-24.04
+    env:
+      NODE_DIR: /opt/hostedtoolcache/node/20.19.2/
+    steps:
+      - name: Restore Java from cache
+        id: cache-task
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.NODE_DIR }}
+          key: node-20.19.2-${{ runner.os }}-${{ runner.arch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.2
+      - run: |
+          which node
+          node -v
+
   older-version-container:
     runs-on: ubuntu-24.04
     container:
