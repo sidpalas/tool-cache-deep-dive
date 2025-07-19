@@ -1,0 +1,15 @@
+name: Install Node JS
+
+on:
+  push:
+    branches:
+      - sp/initial-workflow-development
+    paths:
+      - .github/workflows/install-java.yaml
+  workflow_dispatch:
+
+jobs:
+  preinstalled:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/setup-node@v4
