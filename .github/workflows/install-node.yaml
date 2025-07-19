@@ -72,7 +72,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          docker build . --target=which-and-version
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          target: which-and-version
 
   # TODO: Namespace custom image (or describe Packer + runs-on...)
