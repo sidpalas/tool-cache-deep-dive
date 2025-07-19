@@ -49,6 +49,16 @@ jobs:
           which node
           node -v
 
+  older-version-namespace-cache-volume:
+    runs-on: namespace-profile-custom-image
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.2
+      - run: |
+          which node
+          node -v
+
   older-version-container:
     runs-on: ubuntu-24.04
     container:
