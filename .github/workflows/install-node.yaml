@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - sp/initial-workflow-development
-    paths:
-      - .github/workflows/install-node.yaml
+    # paths:
+    #   - .github/workflows/install-node.yaml
   workflow_dispatch:
 
 jobs:
