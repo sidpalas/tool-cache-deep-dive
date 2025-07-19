@@ -20,3 +20,13 @@ jobs:
       - run: |
           which node
           node -v
+
+  older-version:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.2
+      - run: |
+          which node
+          node -v
