@@ -1,0 +1,24 @@
+{
+  "name": "tool-cache-deep-dive",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sidpalas/tool-cache-deep-dive#readme",
+  "bugs": {
+    "url": "https://github.com/sidpalas/tool-cache-deep-dive/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidpalas/tool-cache-deep-dive.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test-succeed": "echo \"This mimics a passing test suite... ✅\" && exit 0;",
+    "test-fail": "echo \"This mimics a failing test suite... ❌\" && exit 1;"
+  },
+  "dependencies": {
+    "noop": "^1.0.1"
+  }
+}

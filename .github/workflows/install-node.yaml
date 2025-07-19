@@ -67,3 +67,12 @@ jobs:
       - run: |
           which node
           node -v
+
+  older-version-docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          docker build . --target=which-and-version
+
+  # TODO: Namespace custom image (or describe Packer + runs-on...)
