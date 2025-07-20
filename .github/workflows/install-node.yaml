@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - sp/initial-workflow-development
-    # paths:
-    #   - .github/workflows/install-node.yaml
   workflow_dispatch:
 
 jobs:
@@ -59,11 +57,23 @@ jobs:
           which node
           node -v
 
+  # older-version-container:
+  #   runs-on: ubuntu-24.04
+  #   container:
+  #     image: node:20.19.2-alpine
+  #   steps:
+  #     - run: |
+  #         which node
+  #         node -v
+
   older-version-container:
     runs-on: ubuntu-24.04
     container:
-      image: node:20.19.2-alpine
+      image: docker.io/sidpalas/node-tool-cache:20.19.2-bookworm-slim
     steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.2
       - run: |
           which node
           node -v
