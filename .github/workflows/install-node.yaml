@@ -57,25 +57,11 @@ jobs:
           which node
           node -v
 
-  # older-version-container:
-  #   runs-on: ubuntu-24.04
-  #   container:
-  #     image: node:20.19.2-alpine
-  #   steps:
-  #     - run: |
-  #         which node
-  #         node -v
-
   older-version-container:
     runs-on: ubuntu-24.04
     container:
-      image: docker.io/sidpalas/node-tool-cache:20.19.2-bookworm-slim-x64
-      env:
-        RUNNER_TOOL_CACHE: /opt/hostedtoolcache
+      image: node:20.19.2-alpine
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.2
       - run: |
           which node
           node -v
@@ -94,5 +80,3 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           target: which-and-version
-
-  # TODO: Namespace custom image (or describe Packer + runs-on...)
