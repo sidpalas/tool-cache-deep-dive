@@ -69,7 +69,9 @@ jobs:
   older-version-container:
     runs-on: ubuntu-24.04
     container:
-      image: docker.io/sidpalas/node-tool-cache:20.19.2-bookworm-slim
+      image: docker.io/sidpalas/node-tool-cache:20.19.2-bookworm-slim-x64
+      env:
+        RUNNER_TOOL_CACHE: /opt/hostedtoolcache
     steps:
       - uses: actions/setup-node@v4
         with:
