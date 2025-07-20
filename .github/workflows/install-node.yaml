@@ -1,9 +1,6 @@
 name: Install Node.js
 
 on:
-  push:
-    branches:
-      - sp/initial-workflow-development
   workflow_dispatch:
 
 jobs:
