@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - run: |
-          which rust
-          rust -v
+          which rustc
+          rustc --version
