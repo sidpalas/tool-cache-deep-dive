@@ -1,0 +1,16 @@
+name: Install Rust
+
+on:
+  push:
+    branches:
+      - sp/rust-experiment
+  workflow_dispatch:
+
+jobs:
+  preinstalled:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - run: |
+          which rust
+          rust -v
